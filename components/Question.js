@@ -33,7 +33,7 @@ export default class Question extends React.Component {
 
     render() {
         return (
-            <View style={[styles.home]}>
+            <View style={styles.container}>
                 <Text style={styles.questionCategory}> {questions[this.state.questionsIndex].category} </Text>
                 <Text style={styles.questionName}> {questions[this.state.questionsIndex].question} </Text>
                 <Button onPress={() => this.handleAnwser("True")} title="True" />

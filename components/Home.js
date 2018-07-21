@@ -5,7 +5,7 @@ import styles from "../style/trivia.js";
 export default class Home extends React.PureComponent {
     render() {
         return (
-            <View style={[styles.container, styles.home]}>
+            <View style={styles.container}>
                 <Text style={styles.homeWelcome}> Welcome to the Trivia Challenge!</Text>
                 <Text style={styles.homeTitle}> You will be resented with 10 True or False questions</Text>
                 <Text style={styles.homeScore}> Can you score 100%?</Text>

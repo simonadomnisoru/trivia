@@ -24,7 +24,7 @@ export default class EndGame extends React.PureComponent {
 
     render() {
         return (
-            <View style={[styles.container, styles.home]}>
+            <View style={styles.container}>
                 <Text style={styles.endGameText}> End game</Text>
                 <Text style={styles.endGameScore}>You Scored {store.getState().score}/ 10</Text>
                 {displayQuestions(this.questions)}
