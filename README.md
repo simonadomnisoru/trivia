@@ -11,9 +11,6 @@ A Trivia game with 10 question, true or false develop with react native
 ## Demo
 ![demo]()
 
-## Project structure
-![structure]()
-
 ## Libraries
    - [Create React Native App](https://github.com/react-community/create-react-native-app) used to create the mobile app with no build configuration
    - [React navigation](https://reactnavigation.org/) used to facilitate navigation between the app screens

@@ -36,8 +36,14 @@ export default class Question extends React.Component {
             <View style={styles.container}>
                 <Text style={styles.questionCategory}> {questions[this.state.questionsIndex].category} </Text>
                 <Text style={styles.questionName}> {questions[this.state.questionsIndex].question} </Text>
-                <Button onPress={() => this.handleAnwser("True")} title="True" />
-                <Button onPress={() => this.handleAnwser("False")} title="False" />
+                <View style={styles.flexRow}>
+                    <View style={[styles.flex__1, styles.marginRight__10]}>
+                        <Button onPress={() => this.handleAnwser("True")} title="True" color={styles.themeColor.color}/>
+                    </View>
+                    <View style={styles.flex__1}>
+                        <Button onPress={() => this.handleAnwser("False")} title="False" color={styles.themeColor.color}/>
+                    </View>
+                </View>
                 <Text style={styles.questionPagination}> {this.state.questionsIndex + 1}/10 </Text>
             </View>
         );
