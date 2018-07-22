@@ -4,13 +4,12 @@ import store from "../state/store";
 import actions from "../state/actions";
 import styles from "../style/trivia";
 
-let questions = [];
-const storeAnswer = (answer, index) => {
-    let isCorrect = answer === questions[index].correct_answer;
+const storeAnswer = (yourAnswer, index, questions) => {
+    let isCorrect = yourAnswer === questions[index].correct_answer;
     if (isCorrect) {
         store.dispatch({ type: actions.incrementScore });
     }
-    store.dispatch({ type: actions.editQuestions, isCorrect: isCorrect, index: index, yourAnswer: answer });
+    store.dispatch({ type: actions.editQuestions, isCorrect, index, yourAnswer });
 };
 
 export default class Question extends React.Component {
@@ -19,11 +18,11 @@ export default class Question extends React.Component {
         this.state = {
             questionsIndex: 0
         };
-        questions = store.getState().questions;
+        this.questions = store.getState().questions;
     }
 
     handleAnwser = answer => {
-        storeAnswer(answer, this.state.questionsIndex);
+        storeAnswer(answer, this.state.questionsIndex, this.questions);
         if (this.state.questionsIndex < 9) {
             this.setState({ questionsIndex: this.state.questionsIndex + 1 });
         } else {
@@ -34,8 +33,8 @@ export default class Question extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.questionCategory}> {questions[this.state.questionsIndex].category} </Text>
-                <Text style={styles.questionName}> {questions[this.state.questionsIndex].question} </Text>
+                <Text style={styles.questionCategory}> {this.questions[this.state.questionsIndex].category} </Text>
+                <Text style={styles.questionName}> {this.questions[this.state.questionsIndex].question} </Text>
                 <View style={styles.flexRow}>
                     <View style={[styles.flex__1, styles.marginRight__10]}>
                         <Button onPress={() => this.handleAnwser("True")} title="True" color="#0000ff" />
