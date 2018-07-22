@@ -38,13 +38,12 @@ export default class Question extends React.Component {
                 <Text style={styles.questionName}> {questions[this.state.questionsIndex].question} </Text>
                 <View style={styles.flexRow}>
                     <View style={[styles.flex__1, styles.marginRight__10]}>
-                        <Button onPress={() => this.handleAnwser("True")} title="True" color={styles.themeColor.color}/>
+                        <Button onPress={() => this.handleAnwser("True")} title="True" color="#0000ff" />
                     </View>
                     <View style={styles.flex__1}>
-                        <Button onPress={() => this.handleAnwser("False")} title="False" color={styles.themeColor.color}/>
+                        <Button onPress={() => this.handleAnwser("False")} title="False" color="#0000ff" />
                     </View>
                 </View>
-                <Text style={styles.questionPagination}> {this.state.questionsIndex + 1}/10 </Text>
             </View>
         );
     }

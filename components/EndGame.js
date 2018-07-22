@@ -32,7 +32,7 @@ export default class EndGame extends React.PureComponent {
                 <Text style={styles.endGameText}>End game</Text>
                 <Text style={styles.endGameScore}>You Scored {store.getState().score}/ 10</Text>
                 {displayQuestions(this.questions)}
-                <Button onPress={() => this.props.navigation.navigate("Home")} title="Play Again"  color={styles.themeColor.color} />
+                <Button onPress={() => this.props.navigation.navigate("Home")} title="Play Again" color="#0000ff" />
             </View>
         );
     }

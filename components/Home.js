@@ -9,7 +9,7 @@ export default class Home extends React.PureComponent {
                 <Text style={styles.homeWelcome}> Welcome to the Trivia Challenge!</Text>
                 <Text style={styles.homeTitle}> You will be resented with 10 True or False questions</Text>
                 <Text style={styles.homeScore}> Can you score 100%?</Text>
-                <Button onPress={() => this.props.navigation.navigate("Questions")} title="Begin" color={styles.themeColor.color} />
+                <Button onPress={() => this.props.navigation.navigate("Questions")} title="Begin" color="#0000ff" />
             </View>
         );
     }

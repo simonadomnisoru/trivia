@@ -1,7 +1,7 @@
 
 # Trivia
 
-A Trivia game with 10 question, true or false develop with react native
+A Trivia game with 10 question from [Open Trivia Database](https://opentdb.com/), develop with react native
 
 ## Run in local enviroment
    - npm install

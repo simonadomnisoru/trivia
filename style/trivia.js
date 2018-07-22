@@ -16,9 +16,6 @@ const homeStyles = StyleSheet.create({
 	flexColumn: {
 		flexDirection: "column"
 	},
-	themeColor: {
-		color: "#0000ff"
-	},
 	flex__1: {
 		flex: 1
 	},
@@ -52,9 +49,6 @@ const homeStyles = StyleSheet.create({
 	},
 	questionName: {
 		marginBottom: 10
-	},
-	questionPagination: {
-		marginTop: 50
 	},
 	endGameResulttrue: {
 		color: "green"
