@@ -9,7 +9,7 @@ A Trivia game with 10 question from [Open Trivia Database](https://opentdb.com/)
    - use [expo tools](https://expo.io/tools) to see the app in a mobile device or in a simulator
 
 ## Demo
-![demo]()
+![demo](https://user-images.githubusercontent.com/6817073/43045634-79889d90-8dbc-11e8-9345-481fedbaf9fd.gif)
 
 ## Libraries
    - [Create React Native App](https://github.com/react-community/create-react-native-app) used to create the mobile app with no build configuration
