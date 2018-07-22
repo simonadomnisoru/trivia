@@ -2,9 +2,9 @@ import React from "react";
 import { ActivityIndicator, Text, View, StyleSheet, Button } from "react-native";
 import api from "../api/questions";
 import Question from "./Question";
-import store from "../state/store.js";
-import actions from "../state/actions.js";
-import styles from "../style/trivia.js";
+import store from "../state/store";
+import actions from "../state/actions";
+import styles from "../style/trivia";
 
 const Entities = require("html-entities").AllHtmlEntities;
 const entities = new Entities();

@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, View, Button } from "react-native";
-import store from "../state/store.js";
-import actions from "../state/actions.js";
-import styles from "../style/trivia.js";
+import store from "../state/store";
+import actions from "../state/actions";
+import styles from "../style/trivia";
 
 let questions = [];
 const storeAnswer = (answer, index) => {

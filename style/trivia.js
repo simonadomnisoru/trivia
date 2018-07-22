@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const homeStyles = StyleSheet.create({
     container: {
         flex: 1,
-		backgroundColor: "powderblue",
+        backgroundColor: "powderblue",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center"

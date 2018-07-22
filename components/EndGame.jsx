@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, Button, FlatList } from "react-native";
-import store from "../state/store.js";
-import styles from "../style/trivia.js";
+import store from "../state/store";
+import styles from "../style/trivia";
 
 const displayQuestions = questions => (
     <FlatList
