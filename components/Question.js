@@ -1,16 +1,8 @@
 import React from "react";
 import { Text, View, Button } from "react-native";
 import store from "../state/store";
-import actions from "../state/actions";
 import styles from "../style/trivia";
-
-const storeAnswer = (yourAnswer, index, questions) => {
-    let isCorrect = yourAnswer === questions[index].correct_answer;
-    if (isCorrect) {
-        store.dispatch({ type: actions.incrementScore });
-    }
-    store.dispatch({ type: actions.editQuestions, isCorrect, index, yourAnswer });
-};
+import helpers from "../helpers/questions";
 
 export default class Question extends React.Component {
     constructor(props) {
@@ -22,7 +14,7 @@ export default class Question extends React.Component {
     }
 
     handleAnwser = answer => {
-        storeAnswer(answer, this.state.questionsIndex, this.questions);
+        helpers.editQuestion(answer, this.state.questionsIndex, this.questions);
         if (this.state.questionsIndex < 9) {
             this.setState({ questionsIndex: this.state.questionsIndex + 1 });
         } else {
